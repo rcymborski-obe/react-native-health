@@ -118,4 +118,8 @@
                      endDate:(NSDate *)endDate
                   completion:(void (^)(NSArray *, NSError *))completionHandler;
 
+- (void)fetchMenstrualFlowSamplesForPredicate:(NSPredicate *)predicate
+                    limit:(NSUInteger)lim
+                    completion:(void (^)(NSArray *, NSError *))completion;
+
 @end

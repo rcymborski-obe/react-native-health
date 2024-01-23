@@ -100,4 +100,6 @@ export const Permissions = {
   RunningVerticalOscillation: 'RunningVerticalOscillation',
   RunningGroundContactTime: 'RunningGroundContactTime',
   SexualActivity: 'SexualActivity',
+  BasalBodyTemperature: 'BasalBodyTemperature',
+  MenstrualFlow: 'MenstrualFlow',
 }

@@ -816,6 +816,9 @@ declare module 'react-native-health' {
     RunningStrideLength = 'RunningStrideLength',
     RunningVerticalOscillation = 'RunningVerticalOscillation',
     RunningGroundContactTime = 'RunningGroundContactTime',
+    SexualActivity = 'SexualActivity',
+    BasalBodyTemperature = 'BasalBodyTemperature',
+    MenstrualFlow = 'MenstrualFlow',
   }
 
   export enum HealthUnit {
