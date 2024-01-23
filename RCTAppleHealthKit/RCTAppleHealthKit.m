@@ -23,6 +23,7 @@
 #import "RCTAppleHealthKit+Methods_Hearing.h"
 #import "RCTAppleHealthKit+Methods_Summary.h"
 #import "RCTAppleHealthKit+Methods_ClinicalRecords.h"
+#import "RCTAppleHealthKit+Methods_Reproductive.h"
 
 #import <React/RCTBridgeModule.h>
 #import <React/RCTEventDispatcher.h>
