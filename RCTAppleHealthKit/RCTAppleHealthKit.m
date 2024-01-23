@@ -612,12 +612,14 @@ RCT_EXPORT_METHOD(getSexualActivity: (NSDictionary *)input callback:(RCTResponse
 
 RCT_EXPORT_METHOD(getBasalBodyTemperatureSamples:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback)
 {
-   [self reproductive_getBasalBodyTemperatureSamples:input callback:callback];
+    [self _initializeHealthStore];
+    [self reproductive_getBasalBodyTemperatureSamples:input callback:callback];
 }
 
 RCT_EXPORT_METHOD(getMenstrualFlowSamples:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback)
 {
-   [self reproductive_getMenstrualFlowSamples:input callback:callback];
+    [self _initializeHealthStore];
+    [self reproductive_getMenstrualFlowSamples:input callback:callback];
 }
 
 - (HKHealthStore *)_initializeHealthStore {
