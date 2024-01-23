@@ -462,6 +462,10 @@ declare module 'react-native-health' {
       callback: (error: string, result: HealthValue) => void,
     ): void
 
+    getSexualActivity(
+      options: HealthInputOptions,
+      callback: (err: string, results: Array<BaseValue>) => void,
+    ): void
 
     Constants: Constants
   }

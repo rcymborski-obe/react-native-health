@@ -264,6 +264,11 @@
         return [RCTAppleHealthKit clinicalTypeFromName:@"VitalSignRecord"];
     }
 
+    // Reproductive Health
+    if([@"SexualActivity" isEqualToString:key]) {
+        return  [HKObjectType categoryTypeForIdentifier:HKCategoryTypeIdentifierSexualActivity];
+    }
+
     return nil;
 }
 
