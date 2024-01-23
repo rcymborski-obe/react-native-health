@@ -264,6 +264,15 @@
         return [RCTAppleHealthKit clinicalTypeFromName:@"VitalSignRecord"];
     }
 
+    // Reproductive Health
+    if([@"BasalBodyTemperature" isEqualToString:key]) {
+        return [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierBasalBodyTemperature];
+    } else if([@"SexualActivity" isEqualToString:key]) {
+        return  [HKObjectType categoryTypeForIdentifier:HKCategoryTypeIdentifierSexualActivity];
+    } else if ([@"MenstrualFlow" isEqualToString:key]) {
+        return [HKObjectType categoryTypeForIdentifier:HKCategoryTypeIdentifierMenstrualFlow];
+    }
+
     return nil;
 }
 

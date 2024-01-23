@@ -462,6 +462,20 @@ declare module 'react-native-health' {
       callback: (error: string, result: HealthValue) => void,
     ): void
 
+    getSexualActivity(
+      options: HealthInputOptions,
+      callback: (err: string, results: Array<BaseValue>) => void,
+    ): void
+
+    getBasalBodyTemperatureSamples(
+      options: HealthInputOptions,
+      callback: (err: string, results: Array<BaseValue>) => void,
+    ): void
+
+    getMenstrualFlowSamples(
+      options: HealthInputOptions,
+      callback: (err: string, results: Array<BaseValue>) => void,
+    ): void
 
     Constants: Constants
   }
@@ -812,6 +826,9 @@ declare module 'react-native-health' {
     RunningStrideLength = 'RunningStrideLength',
     RunningVerticalOscillation = 'RunningVerticalOscillation',
     RunningGroundContactTime = 'RunningGroundContactTime',
+    SexualActivity = 'SexualActivity',
+    BasalBodyTemperature = 'BasalBodyTemperature',
+    MenstrualFlow = 'MenstrualFlow',
   }
 
   export enum HealthUnit {

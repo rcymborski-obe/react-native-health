@@ -23,6 +23,7 @@
 #import "RCTAppleHealthKit+Methods_Hearing.h"
 #import "RCTAppleHealthKit+Methods_Summary.h"
 #import "RCTAppleHealthKit+Methods_ClinicalRecords.h"
+#import "RCTAppleHealthKit+Methods_Reproductive.h"
 
 #import <React/RCTBridgeModule.h>
 #import <React/RCTEventDispatcher.h>
@@ -601,6 +602,24 @@ RCT_EXPORT_METHOD(getClinicalRecords:(NSDictionary *)input callback:(RCTResponse
 {
     [self _initializeHealthStore];
     [self clinicalRecords_getClinicalRecords:input callback:callback];
+}
+
+RCT_EXPORT_METHOD(getSexualActivity: (NSDictionary *)input callback:(RCTResponseSenderBlock)callback)
+{
+    [self _initializeHealthStore];
+    [self reproductive_getSexualActivity:input callback:callback];
+}
+
+RCT_EXPORT_METHOD(getBasalBodyTemperatureSamples:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback)
+{
+    [self _initializeHealthStore];
+    [self reproductive_getBasalBodyTemperatureSamples:input callback:callback];
+}
+
+RCT_EXPORT_METHOD(getMenstrualFlowSamples:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback)
+{
+    [self _initializeHealthStore];
+    [self reproductive_getMenstrualFlowSamples:input callback:callback];
 }
 
 - (HKHealthStore *)_initializeHealthStore {
